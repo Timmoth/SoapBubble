@@ -5,7 +5,6 @@ export default class App {
   scene: MyScene;
   camera: THREE.PerspectiveCamera;
   renderer: THREE.WebGLRenderer;
-  lastTimeStamp: number;
 
   constructor() {
     let canvas = document.getElementById(
@@ -27,19 +26,24 @@ export default class App {
     this.camera.position.z = 3;
 
     this.scene = new MyScene();
-    this.lastTimeStamp = 0;
   }
 
   Start() {
-    this.tick(0);
+    this.running = true;
+    this.tick();
   }
 
-  tick(timestamp: number) {
-    if (timestamp - this.lastTimeStamp >= 25) {
-      this.lastTimeStamp = timestamp;
-    }
+  Stop() {
+    this.running = false;
+  }
+
+  running: boolean;
+
+  tick() {
+    if (!this.running) return;
+
     this.scene.update();
     this.renderer.render(this.scene, this.camera);
-    requestAnimationFrame((n) => this.tick(n));
+    requestAnimationFrame((n) => this.tick());
   }
 }
