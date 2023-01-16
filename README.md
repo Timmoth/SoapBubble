@@ -1,4 +1,9 @@
 # SoapBubble
+<p align="center">
+   <div style="width:640;height:320">
+       <img style="width: inherit" src="https://raw.githubusercontent.com/Timmoth/SoapBubble/main/image.png">
+</div>
+</p>
 
 ThreeJs simulation of a soap bubble distorted using perlin noise
 
