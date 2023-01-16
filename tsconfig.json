@@ -1,7 +1,0 @@
-{
-    "compilerOptions": {
-        "noImplicitAny": true,
-        "target": "ES6",
-        "module": "ES6"
-    }
-}

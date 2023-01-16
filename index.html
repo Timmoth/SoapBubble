@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soap Bubble</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      import { Start, Stop } from "./dist/SoapBubble.js";
+      window.onload = function () {
+        Start();
+      };
 
-<body>
-    <div class="canvas-container">
-        <canvas id="SoapBubble-canvas"></canvas>
-    </div>
-    <script src="dist/SoapBubble.js"></script>
-    <script>
-        var m = null;
-        window.onload = function () {
-            if (m == null) {
-                m = new SoapBubble();
-            }
-            m.Start();
-        }
-
-        window.unload = function () {
-            if (m == null) {
-                return;
-            }
-            m.Stop();
-        }
+      window.onunload = function () {
+        Stop();
+      };
     </script>
-</body>
 
+    <script></script>
+  </body>
 </html>
