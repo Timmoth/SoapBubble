@@ -1,7 +1,7 @@
 # SoapBubble
 <p align="center">
    <div style="width:640;height:320">
-       <img style="width: inherit" src="https://raw.githubusercontent.com/Timmoth/SoapBubble/main/image.png">
+       <img style="width: inherit" src="https://raw.githubusercontent.com/Timmoth/SoapBubble/main/soapbubble.gif">
 </div>
 </p>
 
